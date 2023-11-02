@@ -8,9 +8,18 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/3e6f2495e7.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header>
+      <%= link_to "/" do %>
+        <i class="fa-solid fa-folder" style="color: #eef6f0;"></i> 
+        Schedules
+        <i class="fa-solid fa-folder" style="color: #eef6f0;"></i> 
+      <% end %>
+    </header>
+    
     <%= yield %>
   </body>
 </html>
