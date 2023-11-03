@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @post = Post.new(params.require)
   end
 
   def show

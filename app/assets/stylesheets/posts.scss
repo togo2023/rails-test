@@ -1,3 +1,6 @@
+
+//indexアクションのcss
+
 .main-container-all {
   max-width: 1400px;
   margin: 0 auto;
@@ -41,6 +44,9 @@
   background: #0db33a;
 }
 
+
+//newアクションのcss
+
 .main-container {
   max-width: 900px;
   margin: 0 auto;
@@ -64,15 +70,15 @@
   border-radius: 10px;
 }
 
-.date-and-memo {
-  margin-top: 20px;
+.title {
+  margin-top: 0;
   margin-bottom: 6px;
   font-size: 18px;
   font-weight: bold;
 }
 
-.title {
-  margin-top: 0;
+.date-and-memo {
+  margin-top: 20px;
   margin-bottom: 6px;
   font-size: 18px;
   font-weight: bold;
@@ -95,6 +101,10 @@ input[type="date"] {
   font-size: 15px;
 }
 
+input[type="checkbox"] {
+  transform: scale(2);
+}
+
 .form-control {
   width: 100%;
   height: 140px;
@@ -102,6 +112,58 @@ input[type="date"] {
   border: 2px solid rgb(180, 179, 179);
   font-size: 15px;
   padding: 10px;
+}
+
+.checkbox-area {
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+
+.checkbox-area p {
+  display: inline;
+  margin: 10px;
+}
+
+.keep-button {
+  padding-top: 20px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; //子要素間の余白を30pxに
+}
+
+.keep-button-cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(236, 68, 68);
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.keep-button-cancel:hover {
+  background: rgb(183, 54, 54);
+}
+
+.keep-button-keep {
+  background: #12d947;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.keep-button-keep:hover {
+  background: #0db33a;
 }
 
 
