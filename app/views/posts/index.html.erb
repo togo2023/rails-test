@@ -2,18 +2,19 @@
   <div class="main-content-all">
     <h1 class="main-content-logo-all">
       <i class="fa-solid fa-paperclip" style="color: #41ec55;"></i>
-      全スケジュール
+      スケジュール
     </h1>
-    <div class="main-content-link">
-      <%= link_to new_post_path do %>
+    
+    <%= link_to new_post_path do %>
+      <div class="main-content-link">
         <i class="fa-regular fa-calendar-plus" style="color: #def7d4;"></i>
         スケジュールを追加する
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 
-  <table>
-    <thead>
+  <div class="all-content">
+    <table>
       <tr>
         <th>ID</th>
         <th>タイトル</th>
@@ -25,20 +26,20 @@
         <th></th>
         <th></th>
       </tr>
-    </thead>
 
-    <tbody>
-      <tr>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-        <td>あああ</td>
-      </tr>
-    </tbody>
-
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.id %></td>
+          <td><%= post.title %></td>
+          <td><%= post.start_day %></td>
+          <td><%= post.end_day %></td>
+          <td><%= post.day_all %></td>
+          <td><%= post.updated_at %></td>
+          <td>あああ</td>
+          <td>あああ</td>
+          <td>あああ</td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
