@@ -17,7 +17,6 @@
 }
 
 .main-content-logo-all {
-  font-family: 'Itim', cursive;
   margin-left: 40px;
   height: 50px;
   color: #444444;
@@ -113,18 +112,16 @@
 }
 
 .main-content-logo {
-  font-family: 'Itim', cursive;
   margin-right: auto;
   margin-left: 40px;
   height: 50px;
   color: #444444;
 }
 
-.form-page-container {
+.form-page-container, .show-page-container {
   height: 100%;
   background: rgb(255, 252, 252);
-  margin-right: 40px;
-  margin-left: 40px;
+  margin: 0  40px;
   padding: 30px 50px;
   border-radius: 10px;
 }
@@ -229,6 +226,73 @@ input[type="checkbox"] {
 .keep-button-keep:hover {
   background: #0db33a;
 }
+
+
+//showアクションのcss
+
+.show-top-link {
+  display: block;
+  margin: 30px 40px 10px;
+  font-size: 18px;
+  color: rgb(0, 0, 255);
+}
+
+.show-button {
+  height: 100%;
+  padding: 10px 40px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-button p {
+  font-size: 22px;
+  font-family: 'Rounded M+ 1c';
+  color: #444444;
+  font-weight: bold;
+}
+
+.show-edit {
+  margin-left: auto;
+}
+
+.show-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 100px;
+  background: #12d947;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.show-page-container table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.show-page-container th {
+  border: 1px solid rgb(213, 210, 210);
+  background: rgb(232, 244, 232);
+  height: 60px;
+  width: 220px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.show-page-container td {
+  border: 1px solid rgb(213, 210, 210);
+  height: 60px;
+  padding: 20px;
+}
+
+
+
+
 
 
 
