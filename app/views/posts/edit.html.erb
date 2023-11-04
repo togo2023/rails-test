@@ -1,0 +1,30 @@
+<div class="main-container">
+  <div class="main-content-all">
+    <h1 class="main-content-logo">
+      <i class="fa-solid fa-paperclip" style="color: #41ec55;"></i>
+      スケジュール編集
+    </h1>
+  </div>
+
+  <%= form_with model: @post, class: "form-page-container" do |f| %>  
+    <p class="title"><span>*</span> タイトル</p>
+    <%= f.text_field :title, placeholder: "タイトル(20文字以内)" %>
+    <p class="date-and-memo"><span>*</span> 開始日</p>
+    <%= f.date_field :start_day %>
+    <p class="date-and-memo"><span>*</span> 終了日</p>
+    <%= f.date_field :end_day %>
+
+    <div class="checkbox-area">
+      <%= f.check_box :day_all ,{}, "true", "false" %>
+      <p>終日の場合はチェックを入れる</p>
+    </div>
+
+    <p class="date-and-memo">スケジュールメモ</P>
+    <%= f.text_area :content, class: "form-control", placeholder: "メモを入力する(500文字以内)" %>
+
+    <div class="keep-button">
+      <%= link_to "キャンセル", "/", class: "keep-button-cancel" %>
+      <%= f.submit "保存", class: "keep-button-keep" %>
+    </div>
+  <% end %>
+</div>

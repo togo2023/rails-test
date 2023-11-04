@@ -22,9 +22,16 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+    if @post.update(params.require(:post).permit(:title, :start_day, :end_day, :day_all, :content))
+      redirect_to "/"
+    else
+      render "edit"
+    end
   end
 
   def destroy
