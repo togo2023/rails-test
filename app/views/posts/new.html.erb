@@ -23,7 +23,7 @@
     <%= f.text_area :content, class: "form-control", placeholder: "メモを入力する(500文字以内)" %>
 
     <div class="keep-button">
-      <%= link_to "キャンセル", "/", {class: "keep-button-cancel"} %>
+      <%= link_to "キャンセル", "/", class: "keep-button-cancel" %>
       <%= f.submit "保存", class: "keep-button-keep" %>
     </div>
   <% end %>

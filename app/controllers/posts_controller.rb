@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @date = Date.current.strftime("%Y/%m/%d")
   end
 
   def new
