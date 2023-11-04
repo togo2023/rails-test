@@ -5,26 +5,30 @@
       スケジュール追加
     </h1>
   </div>
+  
+  <div class="form-page-container">
+    <%= render "shared/error", obj:@post %>
 
-  <%= form_with model: @post, class: "form-page-container" do |f| %>  
-    <p class="title"><span>*</span> タイトル</p>
-    <%= f.text_field :title, placeholder: "タイトル(20文字以内)" %>
-    <p class="date-and-memo"><span>*</span> 開始日</p>
-    <%= f.date_field :start_day %>
-    <p class="date-and-memo"><span>*</span> 終了日</p>
-    <%= f.date_field :end_day %>
+    <%= form_with model: @post do |f| %>  
+      <p class="title"><span>*</span> タイトル</p>
+      <%= f.text_field :title, placeholder: "タイトル(20文字以内)" %>
+      <p class="date-and-memo"><span>*</span> 開始日</p>
+      <%= f.date_field :start_day %>
+      <p class="date-and-memo"><span>*</span> 終了日</p>
+      <%= f.date_field :end_day %>
 
-    <div class="checkbox-area">
-      <%= f.check_box :day_all ,{}, "true", "false" %>
-      <p>終日の場合はチェックを入れる</p>
-    </div>
+      <div class="checkbox-area">
+        <%= f.check_box :day_all ,{}, "true", "false" %>
+        <p>終日の場合はチェックを入れる</p>
+      </div>
 
-    <p class="date-and-memo">スケジュールメモ</P>
-    <%= f.text_area :content, class: "form-control", placeholder: "メモを入力する(500文字以内)" %>
+      <p class="date-and-memo">スケジュールメモ</P>
+      <%= f.text_area :content, class: "form-control", placeholder: "メモを入力する(500文字以内)" %>
 
-    <div class="keep-button">
-      <%= link_to "キャンセル", "/", class: "keep-button-cancel" %>
-      <%= f.submit "保存", class: "keep-button-keep" %>
-    </div>
-  <% end %>
+      <div class="keep-button">
+        <%= link_to "キャンセル", "/", class: "keep-button-cancel" %>
+        <%= f.submit "保存", class: "keep-button-keep" %>
+      </div>
+    <% end %>
+  </div>
 </div>
