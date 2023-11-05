@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #e2ede9;
+  font-family: 'メイリオ', 'ヒラギノ角ゴシック';
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 70px;
+  background: #12d947;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+header a {
+  color: white;
+  font-size: 40px;
+  font-family: 'Itim', cursive;
+}
+
+.flash-message {
+  width: 100%;
+  height: 50px;
+  background: rgb(47, 47, 236);
+  color: white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+
